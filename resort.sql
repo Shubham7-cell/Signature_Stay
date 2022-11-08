@@ -1,4 +1,4 @@
--- to run: http://localhost/Resort-Management/index.php
+-- to run: http://localhost/Signature_Stay/index.php
 
 -- phpMyAdmin SQL Dump
 -- version 5.0.4

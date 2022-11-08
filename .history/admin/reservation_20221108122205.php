@@ -235,12 +235,12 @@ if(!isset($_SESSION["user"]))
 							  <div class="form-group">
                                 
                                             <label>Check-In</label>
-                                            <input name="cin" type ="date" id="cin" class="form-control" min=''>
+                                            <input name="cin" type ="date" class="form-control" min=''>
                                             
                                </div>
 							   <div class="form-group">
                                             <label>Check-Out</label>
-                                            <input name="cout" type ="date" id="cout" class="form-control" min=''>
+                                            <input name="cout" type ="date" class="form-control" min=''>
                                     <script>
                                     var today = new Date();
                                     var dd = String(today.getDate()).padStart(2, '0');

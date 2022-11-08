@@ -233,25 +233,14 @@ if(!isset($_SESSION["user"]))
                                             </select>
                               </div>
 							  <div class="form-group">
-                                
                                             <label>Check-In</label>
-                                            <input name="cin" type ="date" id="cin" class="form-control" min=''>
+                                            <input name="cin" type ="date" class="form-control">
                                             
                                </div>
 							   <div class="form-group">
                                             <label>Check-Out</label>
-                                            <input name="cout" type ="date" id="cout" class="form-control" min=''>
-                                    <script>
-                                    var today = new Date();
-                                    var dd = String(today.getDate()).padStart(2, '0');
-                                    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-                                    var yyyy = today.getFullYear();
-                                    today = yyyy+ '-' + mm + '-' +dd ;
-                                    var cin = document.getElementById("cin");
-                                    var cout = document.getElementById("cout");
-                                    cin.min = today;
-                                    cout.min = today;
-                                </script>           
+                                            <input name="cout" type ="date" class="form-control">
+                                            
                                </div>
                        </div>
                         
