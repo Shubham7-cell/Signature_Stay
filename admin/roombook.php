@@ -249,7 +249,8 @@ if(!isset($_SESSION["user"]))
 														<label>Select the Confirmation</label>
 														<select name="conf"class="form-control">
 															<option value selected>	</option>
-															<option value="Confirm">Confirm</option>
+															<option value="Confirm">Accept</option>
+															<option value="Reject">Reject</option>
 															
 															
 														</select>
@@ -460,9 +461,12 @@ if(!isset($_SESSION["user"]))
 						{	
 							$st = $_POST['conf'];
 							
-							 
+							if($st == "Reject"){
+								$urb = "UPDATE `roombook` SET `stat`='$st' WHERE id = '$id'";
+								mysqli_query($con, $urb);
+							} 
 							
-							if($st=="Confirm")
+							else if($st=="Confirm")
 							{
 									$urb = "UPDATE `roombook` SET `stat`='$st' WHERE id = '$id'";
 									
