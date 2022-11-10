@@ -106,12 +106,13 @@ INSERT INTO `room` (`id`, `type`, `bedding`, `place`, `cusid`) VALUES
 (5, 'Superior Room', 'Quad', 'Free', NULL),
 (6, 'Deluxe Room', 'Single', 'Free', NULL),
 (7, 'Deluxe Room', 'Double', 'Free', NULL),
--- (8, 'Deluxe Room', 'Triple', 'Free', NULL),
-(8, 'Deluxe Room', 'Quad', 'Free', NULL),
-(9, 'Guest House', 'Single', 'Free', 0),
-(10, 'Guest House', 'Quad', 'Free', NULL),
-(11, 'Single Room', 'Single', 'Free', NULL),
--- (14, 'Single Room', 'Double', 'Free', NULL);
+(8, 'Deluxe Room', 'Triple', 'Free', NULL),
+(9, 'Deluxe Room', 'Quad', 'Free', NULL),
+(10, 'Guest House', 'Single', 'Free', 0),
+(11, 'Guest House', 'Double', 'Free', 0),
+(12, 'Guest House', 'Quad', 'Free', NULL),
+(13, 'Single Room', 'Single', 'Free', NULL),
+(14, 'Single Room', 'Double', 'Free', NULL);
 
 -- --------------------------------------------------------
 

@@ -247,7 +247,7 @@ include('db.php');
 						<img src="images/VarsityWear.jpg" style="width:200px" alt=" " class="img-responsive" />
 					</li>
 					<li>
-						<img src="images/teamb2.jpg" style="width:200px" alt=" " class="img-responsive" />
+						<img src="images/Vyom.jpg" style="width:200px" alt=" " class="img-responsive" />
 					</li>
 					</ul>
 					<div class="resp-tabs-container">
@@ -468,7 +468,7 @@ include('db.php');
 							<div class="w3layouts_work_grid_left">
 								<img src="images/5.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_work_grid_left_pos">
-									<img src="images/teamb2.jpg" alt=" " class="img-responsive" />
+									<img src="images/c1.jpg" alt=" " class="img-responsive" />
 								</div>
 							</div>
 							<div class="w3layouts_work_grid_right">
@@ -492,7 +492,7 @@ include('db.php');
 							<div class="w3layouts_work_grid_left">
 								<img src="images/5.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_work_grid_left_pos">
-									<img src="images/VarsityWear.jpg" alt=" " class="img-responsive" />
+									<img src="images/c2.jpg" alt=" " class="img-responsive" />
 								</div>
 							</div>
 							<div class="w3layouts_work_grid_right">
@@ -507,7 +507,7 @@ include('db.php');
 								<p>Sed tempus vestibulum lacus blandit faucibus. 
 									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
 									at imperdiet urna. </p>
-								<h5>Shubham Golwal</h5>
+								<h5>Jahnatan Smith</h5>
 								<p>India</p>
 							</div>
 							<div class="clearfix"> </div>
@@ -516,7 +516,7 @@ include('db.php');
 							<div class="w3layouts_work_grid_left">
 								<img src="images/5.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_work_grid_left_pos">
-									<img src="images/teamb2.jpg" alt=" " class="img-responsive" />
+									<img src="images/c3.jpg" alt=" " class="img-responsive" />
 								</div>
 							</div>
 							<div class="w3layouts_work_grid_right">
@@ -531,7 +531,7 @@ include('db.php');
 								<p>Sed tempus vestibulum lacus blandit faucibus. 
 									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
 									at imperdiet urna. </p>
-								<h5>Vyom Doshi</h5>
+								<h5>Rosalind Cloer</h5>
 								<p>India</p>
 							</div>
 							<div class="clearfix"> </div>
@@ -540,7 +540,7 @@ include('db.php');
 							<div class="w3layouts_work_grid_left">
 								<img src="images/5.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_work_grid_left_pos">
-									<img src="images/VarsityWear.jpg" alt=" " class="img-responsive" />
+									<img src="images/c4.jpg" alt=" " class="img-responsive" />
 								</div>
 							</div>
 							<div class="w3layouts_work_grid_right">

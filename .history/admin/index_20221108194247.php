@@ -9,7 +9,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Signature Stay ADMIN</title>
+  <title>PARADISE ADMIN</title>
   
       <link rel="stylesheet" href="css/style.css">
 </head>
@@ -27,7 +27,7 @@
         </form>
       </div> <!-- end login -->
     </div>
-    <div class="bottom">  <h3><a href="../index.php">Signature Stay Homepage</a></h3></div>    
+    <div class="bottom">  <h3><a href="../index.php">PARADISE RESORT HOMEPAGE</a></h3></div>    
 </body>
 </html>
 <?php

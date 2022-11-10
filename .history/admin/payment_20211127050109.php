@@ -10,7 +10,7 @@ if(!isset($_SESSION["user"]))
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Signature Stay</title>
+    <title>PARADISE RESORT</title>
 	<!-- Bootstrap Styles-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FontAwesome Styles-->
@@ -44,7 +44,7 @@ if(!isset($_SESSION["user"]))
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="usersetting.php"><i class="fa fa-user fa-fw"></i> Admin Profile</a>
+                        <li><a href="usersetting.php"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
                         <li><a href="settings.php"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
@@ -120,10 +120,9 @@ if(!isset($_SESSION["user"]))
 											<th>Bed Rent</th>
 											<th>Meals </th>
 											<th>Gr.Total</th>
-											<th>Print</th> 
-                                            <!-- // th is table head
-                                            // tr is table row -->
-                                        </tr> 
+											<th>Print</th>
+                                            
+                                        </tr>
                                     </thead>
                                     <tbody>
                                         
@@ -138,7 +137,7 @@ if(!isset($_SESSION["user"]))
 											
 											if($id % 2 ==1 )
 											{
-												echo"<tr class='gradeC'> 
+												echo"<tr class='gradeC'>
 													<td>".$row['title']." ".$row['fname']." ".$row['lname']."</td>
 													<td>".$row['troom']."</td>
 													<td>".$row['tbed']."</td>
@@ -151,7 +150,7 @@ if(!isset($_SESSION["user"]))
 													<td>".$row['mepr']."</td>
 													<td>".$row['btot']."</td>
 													<td>".$row['fintot']."</td>
-													<td><a href=print.php?pid=".$id ." <button class='btn btn-primary'> <i class='fa fa-print' ></i> Print Invoice</button></td>
+													<td><a href=print.php?pid=".$id ." <button class='btn btn-primary'> <i class='fa fa-print' ></i> Print</button></td>
 													</tr>";
 											}
 											else
@@ -169,7 +168,7 @@ if(!isset($_SESSION["user"]))
 													<td>".$row['mepr']."</td>
 													<td>".$row['btot']."</td>
 													<td>".$row['fintot']."</td>
-													<td><a href=print.php?pid=".$id ." <button class='btn btn-primary'> <i class='fa fa-print' ></i> Print Invoice</button></td>
+													<td><a href=print.php?pid=".$id ." <button class='btn btn-primary'> <i class='fa fa-print' ></i> Print</button></td>
 													</tr>";
 											
 											}
