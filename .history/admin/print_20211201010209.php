@@ -1,8 +1,11 @@
+
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Details of Book key</title>
-		
+		<title>Invoice</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
+		<script src="script.js"></script>
 		<style>
 		/* reset */
 
@@ -163,117 +166,189 @@ tr:hover .cut { opacity: 1; }
 	ob_start();	
 	include ('db.php');
 
-	$pid = $_GET['sid'];
+	$pid = $_GET['pid'];
 	
 	
 	
-	$sql ="select * from roombook where id = '$pid' ";
+	$sql ="select * from payment where id = '$pid' ";
 	$re = mysqli_query($con,$sql);
 	while($row=mysqli_fetch_array($re))
 	{
 		$id = $row['id'];
-		$title =  $row['Title'];
-		$Fname = $row['FName'];
-		$lname = $row['LName'];
-		$email = $row['Email'];
-		$National = $row['National'];
-		$country = $row['Country'];
-		$phone = $row['Phone'];
-		$room_type = $row['TRoom'];
-		$Bed_type = $row['Bed'];
-		//$Noof_room = $row['Nroom'];
-		$meal_type = $row['Meal'];
-		$cin_date = $row['cin'];
-		$cout_date = $row['cout'];
-		$nodays = $row['nodays'];
+		$title = $row['title'];
+		$fname = $row['fname'];
+		$lname = $row['lname'];
+		$troom = $row['troom'];
+		$bed = $row['tbed'];
+		$nroom = $row['nroom'];
+		$cin = $row['cin'];
+		$cout = $row['cout'];
+		$meal = $row['meal'];
+		$ttot = $row['ttot'];
+		$mepr = $row['mepr'];
+		$btot = $row['btot'];
+		$fintot = $row['fintot'];
+		$days = $row['noofdays'];
+		
+		
+		
 	
 	}
 	
+									$type_of_room = 0;       
+									if($troom=="Superior Room")
+									{
+										$type_of_room = 320;
 									
+									}
+									else if($troom=="Deluxe Room")
+									{
+										$type_of_room = 220;
+									}
+									else if($troom=="Guest House")
+									{
+										$type_of_room = 180;
+									}
+									else if($troom=="Single Room")
+									{
+										$type_of_room = 150;
+									}
+									
+									if($bed=="Single")
+									{
+										$type_of_bed = $type_of_room * 1/100;
+									}
+									else if($bed=="Double")
+									{
+										$type_of_bed = $type_of_room * 2/100;
+									}
+									else if($bed=="Triple")
+									{
+										$type_of_bed = $type_of_room * 3/100;
+									}
+									else if($bed=="Quad")
+									{
+										$type_of_bed = $type_of_room * 4/100;
+									}
+									else if($bed=="None")
+									{
+										$type_of_bed = $type_of_room * 0/100;
+									}
+									
+									if($meal=="Room only")
+									{
+										$type_of_meal=$type_of_bed * 0;
+									}
+									else if($meal=="Breakfast")
+									{
+										$type_of_meal=$type_of_bed * 2;
+									}else if($meal=="Half Board")
+									{
+										$type_of_meal=$type_of_bed * 3;
+									
+									}else if($meal=="Full Board")
+									{
+										$type_of_meal=$type_of_bed * 4;
+									}
+	
 	?>
 		<header>
-			<h1>Information of Guest</h1>
+			<h1>Invoice</h1>
 			<address >
-				<p>SIGNATURE STAY,</p>
-				<p>Maharahstra<br>India.</p>
+				<p>PARADISE RESORT HOTEL</p>
+				<p>Maharashtra<br>India.</p>
 				<p>(+91) 9854123621</p>
 			</address>
-			<span>SIGNATURE STAY</span>
+			<span>PARADISE RESORT</span>
 		</header>
 		<article>
-			<h1></h1>
+			<h1>Recipient</h1>
 			<address >
-				
-				<p><br></p>
-				<p>Customer Name  : -  <?php echo $title." ".$Fname." ".$lname;?><br></p>
+				<p><?php echo $title.$fname." ".$lname ?> <br></p>
 			</address>
 			<table class="meta">
 				<tr>
-					<th><span >Customer ID</span></th>
+					<th><span >Invoice #</span></th>
 					<td><span ><?php echo $id; ?></span></td>
 				</tr>
 				<tr>
-					<th><span >Check in Date</span></th>
-					<td><span ><?php echo $cin_date; ?> </span></td>
-				</tr>
-				<tr>
-					<th><span >Check out Date</span></th>
-					<td><span ><?php echo $cout_date; ?> </span></td>
+					<th><span >Date</span></th>
+					<td><span ><?php echo $cout; ?> </span></td>
 				</tr>
 				
 			</table>
-			<table >
-					<tr> 
-						<td>Customer phone : -  <?php echo $phone; ?> </td>
-						
-						<td>Customer email : -  <?php echo $email; ?> </td>
-					</tr>
-					<tr> 
-						<td>Customer Country : -  <?php echo $country; ?> </td>
-						<td>Customer National : -  <?php echo $National; ?> </td>
-					</tr>
-				</table>
-				<br>
-				<br>
 			<table class="inventory">
 				<thead>
 					<tr>
 						<th><span >Item</span></th>
 						<th><span >No of Days</span></th>
-						
+						<th><span >Rate</span></th>
+						<th><span >Quantity</span></th>
+						<th><span >Price</span></th>
 					</tr>
 				</thead>
 				<tbody>
-				
 					<tr>
-						<td><span ><?php echo $room_type; ?></span></td>
-						<td><span ><?php echo $nodays; ?> </span></td>
-						
+						<td><span ><?php echo $troom; ?></span></td>
+						<td><span ><?php echo $days; ?> </span></td>
+						<td><span data-prefix>Rs.</span><span ><?php  echo $type_of_room;?></span></td>
+						<td><span ><?php echo $nroom;?> </span></td>
+						<td><span data-prefix>Rs.</span><span><?php echo $ttot; ?></span></td>
 					</tr>
 					<tr>
-						<td><span ><?php echo $Bed_type; ?>  Bed </span></td>
-						<td><span ><?php echo $nodays; ?></span></td>
-						
+						<td><span ><?php echo $bed; ?>  Bed </span></td>
+						<td><span ><?php echo $days; ?></span></td>
+						<td><span data-prefix>Rs.</span><span ><?php  echo $type_of_bed;?></span></td>
+						<td><span ><?php echo $nroom;?> </span></td>
+						<td><span data-prefix>Rs.</span><span><?php echo $btot; ?></span></td>
 					</tr>
 					<tr>
-						<td><span ><?php echo $meal_type; ?>  </span></td>
-						<td><span ><?php echo $nodays; ?></span></td>
-						
+						<td><span ><?php echo $meal; ?>  </span></td>
+						<td><span ><?php echo $days; ?></span></td>
+						<td><span data-prefix>Rs.</span><span ><?php  echo $type_of_meal?></span></td>
+						<td><span ><?php echo $nroom;?> </span></td>
+						<td><span data-prefix>Rs.</span><span><?php echo $mepr; ?></span></td>
 					</tr>
 				</tbody>
 			</table>
 			
-			
+			<table class="balance">
+				<tr>
+					<th><span >Total</span></th>
+					<td><span data-prefix>Rs.</span><span><?php echo $fintot; ?></span></td>
+				</tr>
+				<tr>
+					<th><span >Amount Paid</span></th>
+					<td><span data-prefix>Rs.</span><span >0.00</span></td>
+				</tr>
+				<tr>
+					<th><span >Balance Due</span></th>
+					<td><span data-prefix>Rs.</span><span><?php echo $fintot; ?></span></td>
+				</tr>
+			</table>
 		</article>
 		<aside>
 			<h1><span >Contact us</span></h1>
 			<div >
-				<p align="center">Email :- info@paradise.com || Web :- www.paradise.com || Phone :- 9854123621 </p>
+				<p align="center">Email :- info@paradise.com || Web :- www.paradise.com || Phone :- +91 9854123621 </p>
 			</div>
 		</aside>
 	</body>
 </html>
-
+<?php
+$free="Free";
+$nul = null;
+$rpsql = "UPDATE `room` SET `place`='$free',`cusid`='$nul' where `cusid`='$id'";
+if(mysqli_query($con,$rpsql))
+{
+	$delsql= "DELETE FROM `roombook` WHERE id='$id' ";
+	
+	if(mysqli_query($con,$delsql))
+	{
+	
+	}
+}
+?>
 <?php 
 
 ob_end_flush();

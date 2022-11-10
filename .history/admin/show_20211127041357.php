@@ -194,11 +194,11 @@ tr:hover .cut { opacity: 1; }
 		<header>
 			<h1>Information of Guest</h1>
 			<address >
-				<p>SIGNATURE STAY,</p>
+				<p>PARADISE RESORT,</p>
 				<p>Maharahstra<br>India.</p>
 				<p>(+91) 9854123621</p>
 			</address>
-			<span>SIGNATURE STAY</span>
+			<span>PARADISE RESORT</span>
 		</header>
 		<article>
 			<h1></h1>
